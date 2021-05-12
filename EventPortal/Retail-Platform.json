@@ -1,0 +1,324 @@
+{
+  "applicationDomains": [
+    {
+      "createdTime": 1615287153035,
+      "updatedTime": 1620797294992,
+      "createdBy": "mpqojiz9x0f",
+      "changedBy": "mpqojiz9x0f",
+      "id": "1a2mpvr7676r",
+      "name": "ret-backup",
+      "topicDomain": "",
+      "description": "<p><br></p>",
+      "enforceUniqueTopicNames": true,
+      "schemas": [
+        {
+          "createdTime": 1615288520182,
+          "updatedTime": 1620829123348,
+          "createdBy": "mpqojiz9x0f",
+          "changedBy": "mpqojiz9x0f",
+          "id": "1a2mpvr767mb",
+          "name": "ArticleSold",
+          "shared": false,
+          "description": "",
+          "contentType": "JSON",
+          "content": "{\n  \"$id\": \"http://example.com/root.json\",\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"title\": \"article\",\n  \"type\": \"object\",\n  \"required\": [\n    \"marketID\",\n    \"articleKey\",\n    \"articleID\"\n  ],\n  \"properties\": {\n    \"marketID\": {\n      \"type\": \"string\",\n      \"description\": \"ID of a retail market inside the company.\"\n    },\n    \"articleKey\": {\n      \"type\": \"string\",\n      \"description\": \"Contains multiple articles of the same type.\"\n    },\n    \"articleID\": {\n      \"type\": \"string\",\n      \"description\": \"The unique id of a specific article.\"\n    },\n    \"articleDetails\": {\n      \"type\": \"string\",\n      \"description\": \"The specific details of an article.\"\n    }\n  }\n}",
+          "applicationDomainId": "1a2mpvr7676r",
+          "revisionNumber": 3,
+          "versions": [],
+          "type": "schema"
+        },
+        {
+          "createdTime": 1615289652731,
+          "updatedTime": 1620829190996,
+          "createdBy": "mpqojiz9x0f",
+          "changedBy": "mpqojiz9x0f",
+          "id": "1a2mpvr767p3",
+          "name": "ArticleSoldFiltered",
+          "shared": false,
+          "description": "<p><br></p>",
+          "contentType": "JSON",
+          "content": "{\n  \"$id\": \"http://example.com/root.json\",\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"title\": \"article\",\n  \"type\": \"object\",\n  \"required\": [\n    \"marketID\",\n    \"articleKey\",\n    \"articleID\"\n  ],\n  \"properties\": {\n    \"marketID\": {\n      \"type\": \"string\",\n      \"description\": \"ID of a retail market inside the company.\"\n    },\n    \"articleKey\": {\n      \"type\": \"string\",\n      \"description\": \"Contains multiple articles of the same type.\"\n    },\n    \"articleID\": {\n      \"type\": \"string\",\n      \"description\": \"The unique id of a specific article.\"\n    }\n  }\n}",
+          "applicationDomainId": "1a2mpvr7676r",
+          "revisionNumber": 2,
+          "versions": [],
+          "type": "schema"
+        }
+      ],
+      "events": [
+        {
+          "createdTime": 1615287476589,
+          "updatedTime": 1620828948099,
+          "createdBy": "mpqojiz9x0f",
+          "changedBy": "mpqojiz9x0f",
+          "id": "1a2mpvr767ip",
+          "name": "articleSold",
+          "version": "0.0.1",
+          "shared": false,
+          "description": "",
+          "schemaId": "1a2mpvr767mb",
+          "schemaVersionId": null,
+          "keySchemaId": null,
+          "keySchemaVersionId": null,
+          "applicationDomainId": "1a2mpvr7676r",
+          "revisionNumber": 5,
+          "keyPrimitivePayloadType": null,
+          "valuePrimitivePayloadType": null,
+          "topicAddress": {
+            "id": "22fraf8vw8vf",
+            "virtualBrokerId": "22fraf7wyrlj",
+            "topicAddressLevels": [
+              {
+                "id": "22fraf8vw8vp",
+                "consumable": false,
+                "name": "{countryID}",
+                "displayName": "{countryID}",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "22fraf8vw8vz",
+                "consumable": false,
+                "name": "{marketID}",
+                "displayName": "{marketID}",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "22fraf8vw8w9",
+                "consumable": false,
+                "name": "article",
+                "displayName": "article",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "22fraf8vw8wj",
+                "consumable": false,
+                "name": "bought",
+                "displayName": "bought",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "22fraf8vw8wt",
+                "consumable": false,
+                "name": "register",
+                "displayName": "register",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "22fraf8vw8x3",
+                "consumable": true,
+                "name": "{articleID}",
+                "displayName": "{articleID}",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              }
+            ],
+            "type": "topicAddress"
+          },
+          "type": "event"
+        },
+        {
+          "createdTime": 1615289343755,
+          "updatedTime": 1620828969344,
+          "createdBy": "mpqojiz9x0f",
+          "changedBy": "mpqojiz9x0f",
+          "id": "1a2mpvr767nz",
+          "name": "articleSoldFiltered",
+          "version": "0.0.1",
+          "shared": false,
+          "description": "<p><br></p>",
+          "schemaId": "1a2mpvr767p3",
+          "schemaVersionId": null,
+          "keySchemaId": null,
+          "keySchemaVersionId": null,
+          "applicationDomainId": "1a2mpvr7676r",
+          "revisionNumber": 3,
+          "keyPrimitivePayloadType": null,
+          "valuePrimitivePayloadType": null,
+          "topicAddress": {
+            "id": "22fraf8vw8xn",
+            "virtualBrokerId": "22fraf7wyrlj",
+            "topicAddressLevels": [
+              {
+                "id": "22fraf8vw8vp",
+                "consumable": false,
+                "name": "{countryID}",
+                "displayName": "{countryID}",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "22fraf8vw8vz",
+                "consumable": false,
+                "name": "{marketID}",
+                "displayName": "{marketID}",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "22fraf8vw8w9",
+                "consumable": false,
+                "name": "article",
+                "displayName": "article",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "22fraf8vw8wj",
+                "consumable": false,
+                "name": "bought",
+                "displayName": "bought",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "22fraf8vw8xx",
+                "consumable": false,
+                "name": "filtered",
+                "displayName": "filtered",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "22fraf8vw8y7",
+                "consumable": true,
+                "name": "{articleID}",
+                "displayName": "{articleID}",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              }
+            ],
+            "type": "topicAddress"
+          },
+          "type": "event"
+        }
+      ],
+      "applications": [
+        {
+          "createdTime": 1615287372539,
+          "updatedTime": 1620829352696,
+          "createdBy": "mpqojiz9x0f",
+          "changedBy": "mpqojiz9x0f",
+          "id": "1a2mpvr767hl",
+          "name": "CheckoutToSupplierFilter",
+          "version": "0.0.1",
+          "description": "",
+          "applicationDomainId": "1a2mpvr7676r",
+          "producedEventIds": [
+            "1a2mpvr767nz"
+          ],
+          "consumedEventIds": [
+            "1a2mpvr767ip"
+          ],
+          "revisionNumber": 7,
+          "applicationClass": "unspecified",
+          "endpoints": [],
+          "type": "application"
+        },
+        {
+          "createdTime": 1615287317551,
+          "updatedTime": 1620829364072,
+          "createdBy": "mpqojiz9x0f",
+          "changedBy": "mpqojiz9x0f",
+          "id": "1a2mpvr767d5",
+          "name": "SupplierInterface",
+          "version": "0.0.1",
+          "description": "",
+          "applicationDomainId": "1a2mpvr7676r",
+          "producedEventIds": [],
+          "consumedEventIds": [
+            "1a2mpvr767nz"
+          ],
+          "revisionNumber": 5,
+          "applicationClass": "unspecified",
+          "endpoints": [],
+          "type": "application"
+        },
+        {
+          "createdTime": 1615287266007,
+          "updatedTime": 1620829340699,
+          "createdBy": "mpqojiz9x0f",
+          "changedBy": "mpqojiz9x0f",
+          "id": "1a2mpvr76785",
+          "name": "CosmosDB:RetailDB:ArticleSold",
+          "version": "0.0.1",
+          "description": "",
+          "applicationDomainId": "1a2mpvr7676r",
+          "producedEventIds": [],
+          "consumedEventIds": [
+            "1a2mpvr767ip"
+          ],
+          "revisionNumber": 5,
+          "applicationClass": "unspecified",
+          "endpoints": [],
+          "type": "application"
+        },
+        {
+          "createdTime": 1615287198463,
+          "updatedTime": 1620829304548,
+          "createdBy": "mpqojiz9x0f",
+          "changedBy": "mpqojiz9x0f",
+          "id": "1a2mpvr7677b",
+          "name": "CheckoutSystem",
+          "version": "0.0.1",
+          "description": "<p><br></p>",
+          "applicationDomainId": "1a2mpvr7676r",
+          "producedEventIds": [
+            "1a2mpvr767ip"
+          ],
+          "consumedEventIds": [],
+          "revisionNumber": 4,
+          "applicationClass": "unspecified",
+          "endpoints": [],
+          "type": "application"
+        }
+      ],
+      "type": "applicationDomain"
+    }
+  ],
+  "virtualBrokers": [
+    {
+      "createdTime": 1618067179254,
+      "updatedTime": 1618067179254,
+      "createdBy": "1",
+      "changedBy": "1",
+      "id": "22fraf7wyrlj",
+      "name": "Default Event Mesh",
+      "description": "The default Event Mesh",
+      "brokerType": "unspecified",
+      "levelDelimiter": "/",
+      "topicNodes": [],
+      "type": "virtualBroker"
+    }
+  ],
+  "topicValueSets": [],
+  "formatVersion": "1",
+  "type": "ApplicationDomainExport"
+}

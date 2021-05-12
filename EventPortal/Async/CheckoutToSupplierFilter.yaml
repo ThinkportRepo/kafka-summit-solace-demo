@@ -1,0 +1,89 @@
+components:
+  schemas:
+    ArticleSoldFiltered:
+      $schema: "http://json-schema.org/draft-07/schema#"
+      title: article
+      type: object
+      required:
+        - marketID
+        - articleKey
+        - articleID
+      properties:
+        articleID:
+          description: The unique id of a specific article.
+          type: string
+        articleKey:
+          description: Contains multiple articles of the same type.
+          type: string
+        marketID:
+          description: ID of a retail market inside the company.
+          type: string
+      $id: "http://example.com/root.json"
+    ArticleSold:
+      $schema: "http://json-schema.org/draft-07/schema#"
+      title: article
+      type: object
+      required:
+        - marketID
+        - articleKey
+        - articleID
+      properties:
+        articleDetails:
+          description: The specific details of an article.
+          type: string
+        articleID:
+          description: The unique id of a specific article.
+          type: string
+        articleKey:
+          description: Contains multiple articles of the same type.
+          type: string
+        marketID:
+          description: ID of a retail market inside the company.
+          type: string
+      $id: "http://example.com/root.json"
+  messages:
+    articleSoldFiltered:
+      payload:
+        $ref: "#/components/schemas/ArticleSoldFiltered"
+      schemaFormat: application/vnd.aai.asyncapi+json;version=2.0.0
+      contentType: application/json
+    articleSold:
+      payload:
+        $ref: "#/components/schemas/ArticleSold"
+      schemaFormat: application/vnd.aai.asyncapi+json;version=2.0.0
+      contentType: application/json
+channels:
+  "countryID/marketID/article/sold/filtered/articleID":
+    publish:
+      x-scs-function-name: filterArticle
+      message:
+        $ref: "#/components/messages/articleSoldFiltered"
+    parameters:
+      articleID:
+        schema:
+          type: string
+      countryID:
+        schema:
+          type: string
+      marketID:
+        schema:
+          type: string
+  "countryID/marketID/article/sold/register/articleID":
+    subscribe:
+      x-scs-function-name: filterArticle
+      message:
+        $ref: "#/components/messages/articleSold"
+    parameters:
+      articleID:
+        schema:
+          type: string
+      countryID:
+        schema:
+          type: string
+      marketID:
+        schema:
+          type: string
+asyncapi: 2.0.0
+info:
+  title: CheckoutToSupplierFilter
+  version: 0.0.1
